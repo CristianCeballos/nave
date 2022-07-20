@@ -1,0 +1,251 @@
+body {
+    background-color: #01021d;
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    height: 100vh;
+    background-image: url("img/uritorco.jpg");
+    background-size: cover;
+}
+
+.contenedor {
+    width:100%;
+    height:550px;
+    background-color: rgba(0, 0, 0, 0.276);
+}
+
+.contenedor .nave{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px 0px;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Elimina el efecto de tap en iOS */
+   
+    transform: scale(0.6); /* Igual que: scaleX(0.7) scaleY(0.7) */
+}
+
+.contenedorCupula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCupula .cupula {
+    width: 210px;
+    height: 60px;
+    background-image: url('img/textura.jpg');
+    background-size: cover;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCupula .cupula .vidrio{
+    padding: 0px 0px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+    background-color: #222122;
+    background-image: url('img/vidrio.jpg');
+    background-size: cover;
+}
+
+.contenedorTrompa {
+    text-align: center;
+    /* background-color: rgb(181, 208, 208); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.trompa {
+    width: 10px;
+    height: 2px;
+    margin: 0px;
+    background-image: url('img/vidrio.jpg');
+    background-size: cover;
+
+    background: #2d2d2d;
+    
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.naveEncendida{
+    background: #ff8001;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    box-shadow: 0px -10px 15px 5px rgba(215, 226, 15, 0.805);
+    
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contenedorCuerpo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    margin: auto;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #222122;
+}
+
+.ccActivo{
+    justify-content: flex-end;
+}
+
+@keyframes change-color {
+    0% { background-color: #d61a1a; }  
+    50% { background-color: #6bd61a; } 
+    100% { background-color: #d61a1a; }  
+  }
+
+.cuerpo {
+    width: 10px;
+    height: 3px;
+    border-radius: 15px;
+    background: #d6d6d6e6;
+    /* animation: change-color 5s ease 0.5s infinite normal forwards running; */
+
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cuerpoActivo{
+    background-color: rgba(222, 225, 232, 0.935);
+    box-shadow: -1px 5px 15px 5px rgba(252, 252, 235, 0.904);
+}
+
+.contenedorPatas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222122;
+    padding: 5px 10px 5px 10px;
+    width: 250px;
+    border-radius: 7px;
+    /* border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    /* border-radius: 7px; */
+    background-image: url('img/textura.jpg');
+    background-size: cover;
+}
+
+.patas {
+    width: 30px;
+    height: 15px;
+
+    background-image: url('img/carbono.jpg');
+    background-size: cover;
+
+    border-radius: 60px 60px 120px 120px;
+    box-shadow: 1px 1px 0px rgb(62, 62, 62);
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.pataActiva{
+    background: #e0f712;
+
+}
+
+.contenedorInterseccionInferior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interseccionInferior {
+    width: 210px;
+    height: 15px;
+    background-color: #3a3a3a;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-image: url('img/textura.jpg');
+    background-size: cover;
+}
+
+
+.contenedorPropulsores{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.contenedorPropulsores .propulsor{
+    width: 30px;
+    height: 5px;
+    background-color: #2a2a2a;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-bottom: 1px solid #d6941a;
+}
+
+.contenedorPropulsores .propulsorActivo{
+    border-bottom: 1px solid #d6941a;
+}
+
+.encenderPropulsores{
+    box-shadow: 0px 10px 15px 5px rgba(226, 145, 15, 0.53);
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.botones input{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #222122;
+    font-size: large;
+    color: white;
+    background-size: cover;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    
+    color: #2a2a2a;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 1px 3px #e4d01c;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.boton{
+    cursor: pointer;
+    position:relative;
+}
+
+.instrucc{
+    font-size: 20px;
+}
